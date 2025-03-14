@@ -1,3 +1,4 @@
+#knapsack
 class Item:
     def __init__ (self, weight, value):
         self.weight = weight
@@ -6,7 +7,7 @@ def getMax(weights, values, capacity):
     items = [Item(w,v) for w,v in zip (weights, values)]
 
     items.sort(key = lambda item: item.value / item.weight, reverse = True)
-    
+
     maxVal = 0.0
 
     for item in items:
